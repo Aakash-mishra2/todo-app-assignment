@@ -5,7 +5,7 @@ import Button from "../shared/formElements/Button";
 
 import './styles/shoplist.css';
 
-export default function ShopList() {
+export default function ToDoList() {
 
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);

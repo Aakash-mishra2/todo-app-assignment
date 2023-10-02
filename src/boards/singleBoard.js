@@ -1,6 +1,6 @@
-import './styles/storeItem.css';
+import './styles/singleBoard.css';
 
-const StoreItem = (props) => {
+const SingleBoard = (props) => {
     return (
         <div className="note"
             onClick={() => {
@@ -13,4 +13,4 @@ const StoreItem = (props) => {
         </div>
     )
 }
-export default StoreItem;
+export default SingleBoard;

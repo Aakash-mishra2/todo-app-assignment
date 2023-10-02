@@ -1,9 +1,9 @@
-import StoreItem from './storeItem';
-import './styles/listStore.css';
+import singleBoard from './singleBoard';
+import './styles/dashboard.css';
 
-const allBoards = () => {
+const Dashboard = () => {
 
-    const boards = [
+    const allBoards = [
         {
             id: 'c1',
             date: '23 June',
@@ -19,18 +19,16 @@ const allBoards = () => {
     return (
 
         <div>
-            <Header />
             {allBoards.map((item) => (
-                <StoreItem
+                <SingleBoard
                     id={item.id}
                     date={item.date}
                     things={item.items}
                 />
             )
             )}
-            <Footer />
         </div>
     )
 };
 
-export default ListStore;
+export default Dashboard;
