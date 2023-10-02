@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Navigate, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import MainNavigation from './shared/navigation/MainNavigation';
 import Dashboard from './boards/dashboard';
 import ToDoList from './todoList/todolist';
