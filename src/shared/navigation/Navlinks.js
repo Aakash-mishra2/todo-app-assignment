@@ -9,7 +9,7 @@ export default function Navlinks() {
     // const currentUserId = useSelector((state) => state.userAccount.UserId);
     // const isLoggedIn = useSelector((state) => state.userAccount.isloggedIn);
     // const dispatch = useDispatch();
-    isLoggedIn = true;
+    const isLoggedIn = true;
     return (
         <ul className="nav-links">
             
@@ -26,8 +26,8 @@ export default function Navlinks() {
                 <NavLink to="/"> LOGIN </NavLink>
             </li>}
             
-            <li>   LOGOUT
-                {/* {isLoggedIn && <Button onClick={() => dispatch(logOut())}> LOGOUT </Button>} */}
+            <li> 
+                {isLoggedIn && <Button> LOGOUT </Button> }
             </li>
         </ul>
     );

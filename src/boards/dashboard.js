@@ -1,4 +1,4 @@
-import singleBoard from './singleBoard';
+import SingleBoard from './singleBoard';
 import './styles/dashboard.css';
 
 const Dashboard = () => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
                 <SingleBoard
                     id={item.id}
                     date={item.date}
-                    things={item.items}
+                    things={item.todo}
                 />
             )
             )}

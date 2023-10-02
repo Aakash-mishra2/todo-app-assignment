@@ -9,7 +9,6 @@ export default function ToDoList() {
 
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
-  const auth = useContext(UserContext);
 
   function handleChange(event) {
     const newValue = event.target.value;
@@ -27,10 +26,6 @@ export default function ToDoList() {
     setItems(
       previousItems => previousItems.filter((item, index) => index !== id)
     );
-  }
-  function userLogoutHandler() {
-    auth.userData = { name: '', email: '', password: '' };
-    auth.logout();
   }
   return (
     <div className="container">
@@ -56,8 +51,7 @@ export default function ToDoList() {
           ))}
         </ul>
         <ul>
-          <Button className="inputButtons" to="/listStore" ><b> ALL Lists </b></Button>
-          <button className="inputButtons" onClick={userLogoutHandler}><b>LOGOUT</b></button>
+          <Button className="inputButtons" to="/" ><b> ALL Lists </b></Button>
         </ul>
       </div>
     </div>
