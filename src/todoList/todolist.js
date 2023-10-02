@@ -8,7 +8,7 @@ import './styles/shoplist.css';
 export default function ShopList() {
 
   const [inputText, setInputText] = useState("");
-  const [items, setItems] = useState(["Click on item name to delete. "]);
+  const [items, setItems] = useState([]);
   const auth = useContext(UserContext);
 
   function handleChange(event) {
@@ -34,7 +34,6 @@ export default function ShopList() {
   }
   return (
     <div className="container">
-      <UserDetails className="container" />
       <div className="heading">
         <h1>
           Shopping List <br /> {new Date().toLocaleString()}
