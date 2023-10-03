@@ -1,34 +1,37 @@
 .aws-btn {
+    letter-spacing: 2px;
+    margin: 0 0.7rem;
     --button-default-height: 50px !important;
-    --button-default-font-size: 17px !important;
-    --button-default-border-radius: 12px !important;
-    --button-horizontal-padding: 26px !important;
-    --button-raise-level: 5px !important;
+    --button-default-font-size: 19px !important;
+    --button-default-border-radius: 13px !important;
+    --button-horizontal-padding: 23px !important;
+    --button-raise-level: 4px !important;
     --button-hover-pressure: 2 !important;
     --transform-speed: 0.185s !important;
     --button-primary-color: #8e067c !important;
-    --button-primary-color-dark: #8c886e !important;
+    --button-primary-color-dark: #baa627 !important;
     --button-primary-color-light: #ffffff !important;
-    --button-primary-color-hover: #00a0ab !important;
-    --button-primary-color-active: #008891!important;
-    --button-primary-border: 1px solid #ffe11d !important;
-    --button-secondary-color: #db4557 !important;
-    --button-secondary-color-dark: #d0b400 !important;
-    --button-secondary-color-light: #ffe11d !important;
-    --button-secondary-color-hover: #d73044 !important;
-    --button-secondary-color-active: #c7263a !important;
-    --button-secondary-border: 1px solid #ffe11d !important;
-    --button-anchor-color: #2d2d3a !important;
-    --button-anchor-color-dark: #674f40 !important;
-    --button-anchor-color-light: #97735d !important;
-    --button-anchor-color-hover: #2d2d3a !important;
-    --button-anchor-color-active: #2d2d3a !important;
-    --button-anchor-border: 1px solid #876753 !important;
-    --button-danger-color: #2d2d3a !important;
-    --button-danger-color-dark: #0c0c0f !important;
-    --button-danger-color-light: #f1f1f4 !important;
-    --button-danger-color-hover: #292934 !important;
-    --button-danger-color-active: #22222c !important;
+    --button-primary-color-hover: #5b084c !important;
+    --button-primary-color-active: #c548d3!important;
+    --button-primary-border: 0px solid #ffe11d !important;
+    --button-secondary-color: #a90a0a;
+    --button-secondary-color-dark: #9a936a;
+    --button-secondary-color-light: #f5f5f5;
+    --button-secondary-color-hover: #e1374b;
+    --button-secondary-color-active: #9c1122;
+    --button-secondary-border: 0px solid #1e88e5;
+    --button-anchor-color: #47475c;
+    --button-anchor-color-dark: #ab9507;
+    --button-anchor-color-light: #fbb88e;
+    --button-anchor-color-hover: #2c2c4e;
+    --button-anchor-color-active: #2d2d3a;
+    --button-anchor-border: 0px solid transparent;
+    --button-danger-color: #47475c;
+    --button-danger-color-dark: #ab9507;
+    --button-danger-color-light: #fbb88e;
+    --button-danger-color-hover: #2c2c4e;
+    --button-danger-color-active: #2d2d3a;
+    --button-danger-border: 0px solid transparent;
     --button-danger-border: none;
 }
 .note {
@@ -64,40 +67,8 @@
     gap: 1rem;
     text-align: center;
 }
-.aws-btn {
 
-    --button-default-height: 50px;
-    --button-default-font-size: 17px;
-    --button-default-border-radius: 12px;
-    --button-horizontal-padding: 26px;
-    --button-raise-level: 5px;
-    --button-hover-pressure: 2;
-    --transform-speed: 0.185s;
-    --button-primary-color: #8e067c !important;
-    --button-primary-color-dark: #8c886e;
-    --button-primary-color-light: #ffffff;
-    --button-primary-color-hover: #00a0ab;
-    --button-primary-color-active: #008891;
-    --button-primary-border: 1px solid #ffe11d;
-    --button-secondary-color: #db4557;
-    --button-secondary-color-dark: #d0b400;
-    --button-secondary-color-light: #ffe11d;
-    --button-secondary-color-hover: #d73044;
-    --button-secondary-color-active: #c7263a;
-    --button-secondary-border: 1px solid #ffe11d;
-    --button-anchor-color: #2d2d3a;
-    --button-anchor-color-dark: #674f40;
-    --button-anchor-color-light: #97735d;
-    --button-anchor-color-hover: #2d2d3a;
-    --button-anchor-color-active: #2d2d3a;
-    --button-anchor-border: 1px solid #876753;
-    --button-danger-color: #2d2d3a;
-    --button-danger-color-dark: #0c0c0f;
-    --button-danger-color-light: #f1f1f4;
-    --button-danger-color-hover: #292934;
-    --button-danger-color-active: #22222c;
-    --button-danger-border: none;
-    }
+
     
     
     

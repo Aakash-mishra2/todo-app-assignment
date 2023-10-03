@@ -4,7 +4,6 @@ import 'react-awesome-button/dist/styles.css';
 import Modal from "../shared/UIElements/Modal";
 import { completeTodo } from '../features/boardSlice';
 import { useDispatch } from 'react-redux';
-import Button from '../shared/formElements/Button';
 import './styles/singleBoard.css';
 
 
@@ -28,8 +27,7 @@ const SingleBoard = (props) => {
                 header={
                     <span>
                         <p>{props.id}</p>
-                        <AwesomeButton
-                            type="primary"
+                        <AwesomeButton type="primary"
                             onPress={() => {
                                 // do something
                             }}>
@@ -39,8 +37,16 @@ const SingleBoard = (props) => {
                 }
                 footer={
                     <span>
-                        <Button onClick={(e) => e.preventDefault()} >DELETE</Button>
-                        <Button danger onClick={toggleBoard}>CLOSE</Button>
+                    <AwesomeButton type="secondary"
+                            onPress={() => {
+                                // do something
+                            }}>
+                            DELETE
+                        </AwesomeButton>
+                        <AwesomeButton type="danger"
+                            onPress={toggleBoard}>
+                            CLOSE
+                        </AwesomeButton>
                     </span>
                 }
             >
