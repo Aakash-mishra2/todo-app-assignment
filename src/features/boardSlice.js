@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { v4 as uuidv4 } from 'uuid';
 // const initialState = [
 //     {
 //     name: '',
@@ -11,7 +11,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     boards: [
         {
-            id: 'c2',
+            id: (uuidv4()),
             date: '25 June',
             leftTodo: ["tomato", "spinach"],
             doneTodo: []
@@ -55,7 +55,11 @@ const boardSlice = createSlice({
             };
             state = state.boards.push(newBoard);
         },
-        deleteBoard: {}
+        deleteBoard: (state,action) => {
+            const delID = action.payload.id;
+            const selectedBoard = state.boards.findIndex((b) => b.id === delID);
+            state.boards.splice(selectedBoard, 1);
+        }
     }
 });
 

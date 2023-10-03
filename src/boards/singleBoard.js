@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { AwesomeButton } from 'react-awesome-button';
+import { AwesomeButton, AwesomeButtonProgress } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Modal from "../shared/UIElements/Modal";
-import { completeTodo } from '../features/boardSlice';
+import { completeTodo, deleteBoard } from '../features/boardSlice';
 import { useDispatch } from 'react-redux';
 import './styles/singleBoard.css';
 
 
 const SingleBoard = (props) => {
+    const [openBox, setOpenBox] = useState(false);
+    const toggleBoard = () => setOpenBox(prev => !prev);
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
@@ -16,9 +18,8 @@ const SingleBoard = (props) => {
             boardID: props.id,
         }));
     }
-    const [openBox, setOpenBox] = useState(false);
-    const toggleBoard = () => setOpenBox(prev => !prev);
-
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+    
     return (
         <React.Fragment>
             <Modal
@@ -37,12 +38,16 @@ const SingleBoard = (props) => {
                 }
                 footer={
                     <span>
-                    <AwesomeButton type="secondary"
-                            onPress={() => {
-                                // do something
+                    <AwesomeButtonProgress type="secondary"
+                            onPress={ async (element, next) => {
+                                await delay(1000);
+                                dispatch(deleteBoard({id: props.id}));
+                                next();
+                                await delay(500);
+                                toggleBoard();
                             }}>
                             DELETE
-                        </AwesomeButton>
+                        </AwesomeButtonProgress>
                         <AwesomeButton type="danger"
                             onPress={toggleBoard}>
                             CLOSE

@@ -3,7 +3,7 @@ import './styles/dashboard.css';
 import { createBoard } from '../features/boardSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '../shared/formElements/Button';
-
+import {v4 as uuidv4 } from 'uuid';
 
 const Dashboard = () => {
     const dispatch = useDispatch();
@@ -11,14 +11,14 @@ const Dashboard = () => {
     const addBoards = () => {
         dispatch(createBoard(
             {
-                id: 'c1',
+                id: (uuidv4()),
                 date: '23 June',
                 todo: ["milk", "curd", "eggs"]
             }
         ));
         dispatch(createBoard(
             {
-                id: 'c2',
+                id: (uuidv4()),
                 date: '25 June',
                 todo: ["tomato", "spinach"]
             }
