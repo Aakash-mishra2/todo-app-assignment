@@ -9,7 +9,14 @@ import { createSlice } from "@reduxjs/toolkit";
 //     },
 // ];
 const initialState = {
-    boards: [],
+    boards: [
+        {
+            id: 'c2',
+            date: '25 June',
+            leftTodo: ["tomato", "spinach"],
+            doneTodo: []
+        }
+    ],
 };
 
 const boardSlice = createSlice({

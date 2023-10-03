@@ -19,3 +19,15 @@
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
+.alltasks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.done, .notDone{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
