@@ -9,12 +9,7 @@ import { createSlice } from "@reduxjs/toolkit";
 //     },
 // ];
 const initialState = {
-    boards: [{
-        id: '',
-        date: '',
-        completeTodo: [],
-        incompleteTasks: [],
-    }],
+    boards: [],
 };
 
 const boardSlice = createSlice({
@@ -27,7 +22,12 @@ const boardSlice = createSlice({
             const id = action.payload.name;
             const date = action.payload.date;
             const incompleteTasks = action.payload.todo;
-            const newBoard = {id: id, date: date, leftTodo: incompleteTasks,};
+            const newBoard = {
+                id: id, 
+                date: date, 
+                leftTodo: incompleteTasks,
+                doneTodo: [],
+            };
             state = state.boards.push(newBoard);
         },
         deleteBoard: {}

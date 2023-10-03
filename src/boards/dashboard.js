@@ -1,7 +1,7 @@
 import SingleBoard from './singleBoard';
 import './styles/dashboard.css';
-
-import { addTodo, deleteTodo, createBoard, deleteBoard } from '../features/boardSlice';
+import { useState } from 'react';
+import { createBoard } from '../features/boardSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '../shared/formElements/Button';
 
@@ -9,19 +9,7 @@ import Button from '../shared/formElements/Button';
 const Dashboard = () => {
     const dispatch = useDispatch();
     const allBoards2 = useSelector((state) => state.boards.boards);
-
-    const allBoards = [
-        {
-            id: 'c1',
-            date: '23 June',
-            todo: ["milk", "curd", "eggs"]
-        },
-        {
-            id: 'c2',
-            date: '25 June',
-            todo: ["tomato", "spinach"]
-        }
-    ]
+    const [boards, setBoards] = useState();
     const addBoards = () => {
         dispatch(createBoard(
             {
@@ -37,18 +25,19 @@ const Dashboard = () => {
                 todo: ["tomato", "spinach"]
             }
         ));
-        console.log(allBoards2);
+        setBoards(allBoards2);
     }
     
     return (
 
         <div>
             <Button onClick={addBoards}>Add boards</Button>
-            {allBoards.map((item) => (
+            {boards && boards.map((item) => (
                 <SingleBoard
+                    key = {item.id}
                     id={item.id}
                     date={item.date}
-                    things={item.todo}
+                    things={item.leftTodo}
                 />
             )
             )}

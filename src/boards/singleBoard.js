@@ -2,6 +2,8 @@ import './styles/singleBoard.css';
 
 const SingleBoard = (props) => {
     return (
+
+
         <div className="note"
             onClick={() => {
                 props.whenClicked(props.id);
@@ -9,7 +11,6 @@ const SingleBoard = (props) => {
             <h1>
                 {props.date}
             </h1>
-            {props.things.map(x => <p>{x}</p>)}
         </div>
     )
 }
