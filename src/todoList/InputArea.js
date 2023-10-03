@@ -1,21 +1,27 @@
 import React from "react";
 import './styles/InputArea.css';
+import { AwesomeButton } from "react-awesome-button";
 
 function InputArea(props) {
   return (
-    <div className="form">
+    <div className="newTodo">
       <span>
         <input
+          autoComplete="off"
           onChange={(event) => {
             props.onChecked(event);
           }}
-          placeholder="Enter Items"
+          placeholder="Add New Todo"
           type="text"
           value={props.inputText}
         />
       </span>
       <span>
-        <button className="inputButtons" onClick={() => props.addItem()} style={{ width: 'auto' }} ><b> ADD </b></button>
+        <AwesomeButton 
+          type="primary"
+          onPress={() => props.addItem()}
+          className="plus"
+        >+</AwesomeButton>
       </span>
     </div>
   );
