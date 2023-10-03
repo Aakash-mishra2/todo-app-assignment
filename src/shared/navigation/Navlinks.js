@@ -25,9 +25,8 @@ export default function Navlinks() {
            {!isLoggedIn && <li>
                 <NavLink to="/"> LOGIN </NavLink>
             </li>}
-            
             <li> 
-                {isLoggedIn && <Button> LOGOUT </Button> }
+                {isLoggedIn && <Button to=""> LOGOUT </Button> }
             </li>
         </ul>
     );

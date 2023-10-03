@@ -3,7 +3,7 @@ import './styles/ToDoItem.css';
 
 function ToDoItem(props) {
   return (
-    <div
+    <div className="tasksList"
       onClick={() => {
         props.onChecked(props.id);
       }}
