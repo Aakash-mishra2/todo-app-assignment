@@ -25,25 +25,26 @@ const boardSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             const newTask = action.payload.taskName;
-            const activeBoard = action.payload.boardName;
+            const activeBoard = action.payload.boardID;
             const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
             state.boards[selectedBoard].leftTodo.push(newTask);
         },
         deleteTodo: (state, action)=>{
             const delTask = action.payload.taskName;
-            const activeBoard = action.payload.boardName;
+            const activeBoard = action.payload.boardID;
             const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
             state.boards[selectedBoard].leftTodo = state.boards[selectedBoard].leftTodo.filter((item) => item !== delTask);
         },
         completeTodo: (state, action) => {
             const delTask = action.payload.taskName;
-            const activeBoard = action.payload.boardName;
+            const activeBoard = action.payload.boardID;
             const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
             state.boards[selectedBoard].leftTodo = state.boards[selectedBoard].leftTodo.filter((item) => item !== delTask);
             state.boards[selectedBoard].doneTodo.push(delTask);
+            state.boards[selectedBoard].doneTodo.reverse();
         },
         createBoard: (state, action) => {
-            const id = action.payload.name;
+            const id = action.payload.id;
             const date = action.payload.date;
             const incompleteTasks = action.payload.todo;
             const newBoard = {
@@ -58,5 +59,5 @@ const boardSlice = createSlice({
     }
 });
 
-export const { addTodo, deleteTodo, createBoard, deleteBoard } = boardSlice.actions;
+export const { addTodo, deleteTodo, completeTodo, createBoard, deleteBoard } = boardSlice.actions;
 export default boardSlice.reducer;

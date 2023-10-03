@@ -1,19 +1,34 @@
 import React, { useState } from 'react';
 import Modal from "../shared/UIElements/Modal";
+import { completeTodo } from '../features/boardSlice';
+import { useDispatch } from 'react-redux';
 import './styles/singleBoard.css';
+import Button from '../shared/formElements/Button';
 
 const SingleBoard = (props) => {
+    const dispatch = useDispatch();
+
     const handleChange = (event) => {
-         console.log(event.target.name);
+        dispatch(completeTodo({
+            taskName:  event.target.name,
+            boardID: props.id,
+        }));
     }
     const [openBox, setOpenBox] = useState(false);
     const toggleBoard = () => setOpenBox(prev => !prev);
+
     return (
         <React.Fragment>
             <Modal
                 show={openBox}
                 closeBox={toggleBoard}
                 header={<p>{props.id} : {props.date}</p>}
+                footer={
+                    <span>
+                        <Button onClick={(e) => e.preventDefault()} >Add Task</Button>
+                        <Button danger onClick={toggleBoard}>CLOSE</Button>
+                    </span>
+                }
             >
                 <section className='alltasks'>
                     <div className='done'>
@@ -27,7 +42,7 @@ const SingleBoard = (props) => {
                     </div>
                     <div className='notDone'>
                         <h1>Completed Tasks</h1>
-                        {props.doneTasks.map(x => <p>{x}</p>)}
+                        {props.doneTasks.map(x => <b><em>{x}</em></b>)}
                     </div>
                 </section>
             </Modal>
