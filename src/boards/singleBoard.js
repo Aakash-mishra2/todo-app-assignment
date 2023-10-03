@@ -2,15 +2,21 @@ import React, { useState } from 'react';
 import { AwesomeButton, AwesomeButtonProgress } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Modal from "../shared/UIElements/Modal";
-import { completeTodo, deleteBoard } from '../features/boardSlice';
+import { addTodo, completeTodo, deleteBoard } from '../features/boardSlice';
 import { useDispatch } from 'react-redux';
 import './styles/singleBoard.css';
+import InputArea from '../todoList/InputArea';
 
 
 const SingleBoard = (props) => {
     const [openBox, setOpenBox] = useState(false);
     const toggleBoard = () => setOpenBox(prev => !prev);
+    const [inputText, setInputText] = useState("");
     const dispatch = useDispatch();
+    const handleTodo = (event) => {
+        const newTask = event.target.value;
+        setInputText(newTask);
+    }
 
     const handleChange = (event) => {
         dispatch(completeTodo({
@@ -19,7 +25,13 @@ const SingleBoard = (props) => {
         }));
     }
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-    
+    const addTask = () => {
+        dispatch(addTodo({
+            boardID: props.id,
+            taskName: inputText,
+        }));
+        setInputText("");
+    }
     return (
         <React.Fragment>
             <Modal
@@ -27,21 +39,33 @@ const SingleBoard = (props) => {
                 closeBox={toggleBoard}
                 header={
                     <span>
-                        <p>{props.id}</p>
-                        <AwesomeButton type="primary"
-                            onPress={() => {
-                                // do something
-                            }}>
-                            Add new
-                        </AwesomeButton>
+                        <p>"---"</p>
+                        <div>
+                            <InputArea
+                                addItem =  {addTask}
+                                onChecked = {handleTodo}
+                                inputText = {inputText}
+                            />
+                            {/* <input
+                                autoComplete="off"
+                                type='text'
+                                placeholder='Add New Task'
+                                id="newTodo"
+                            />
+                            <AwesomeButton type="primary"
+                                onPress={addTodo}
+                                className="plus">
+                                +
+                            </AwesomeButton> */}
+                        </div>
                     </span>
                 }
                 footer={
                     <span>
-                    <AwesomeButtonProgress type="secondary"
-                            onPress={ async (element, next) => {
+                        <AwesomeButtonProgress type="secondary"
+                            onPress={async (element, next) => {
                                 await delay(1000);
-                                dispatch(deleteBoard({id: props.id}));
+                                dispatch(deleteBoard({ id: props.id }));
                                 next();
                                 await delay(500);
                                 toggleBoard();

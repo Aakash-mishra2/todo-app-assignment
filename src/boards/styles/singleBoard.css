@@ -1,9 +1,12 @@
+.plus {
+    --button-default-border-radius: 100% !important;
+}
 .aws-btn {
     letter-spacing: 2px;
     margin: 0 0.7rem;
     --button-default-height: 50px !important;
     --button-default-font-size: 19px !important;
-    --button-default-border-radius: 13px !important;
+    --button-default-border-radius: 13px;
     --button-horizontal-padding: 23px !important;
     --button-raise-level: 4px !important;
     --button-hover-pressure: 2 !important;
