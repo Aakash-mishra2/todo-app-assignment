@@ -13,12 +13,11 @@
   
   .modal__header {
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 0.4rem 0.5rem;
     background: #213555;
     color: white;
-    height: 5rem;
+    height: 4rem;
     font-size: 1.4rem;
-    border-radius: 6px;
   }
   
   .modal__header>span {

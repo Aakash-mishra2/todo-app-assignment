@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 import Modal from "../shared/UIElements/Modal";
 import { completeTodo } from '../features/boardSlice';
 import { useDispatch } from 'react-redux';
-import './styles/singleBoard.css';
 import Button from '../shared/formElements/Button';
+import './styles/singleBoard.css';
+
 
 const SingleBoard = (props) => {
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
         dispatch(completeTodo({
-            taskName:  event.target.name,
+            taskName: event.target.name,
             boardID: props.id,
         }));
     }
@@ -22,21 +25,32 @@ const SingleBoard = (props) => {
             <Modal
                 show={openBox}
                 closeBox={toggleBoard}
-                header={<p>{props.id} : {props.date}</p>}
+                header={
+                    <span>
+                        <p>{props.id}</p>
+                        <AwesomeButton
+                            type="primary"
+                            onPress={() => {
+                                // do something
+                            }}>
+                            Add new
+                        </AwesomeButton>
+                    </span>
+                }
                 footer={
                     <span>
-                        <Button onClick={(e) => e.preventDefault()} >Add Task</Button>
+                        <Button onClick={(e) => e.preventDefault()} >DELETE</Button>
                         <Button danger onClick={toggleBoard}>CLOSE</Button>
                     </span>
                 }
             >
                 <section className='alltasks'>
                     <div className='done'>
-                        <h1>Incomplete Tasks</h1>
-                        {props.remTasks.map(x => 
+                        <h2>New Tasks</h2>
+                        {props.remTasks.map(x =>
                             <label htmlFor={x}>
-                            <b><em>{x}      </em></b>
-                            <input type='checkbox' name={x} onChange={handleChange} />
+                                <b><em>{x}      </em></b>
+                                <input type='checkbox' name={x} onChange={handleChange} />
                             </label>
                         )}
                     </div>
