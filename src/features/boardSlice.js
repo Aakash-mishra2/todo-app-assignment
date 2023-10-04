@@ -16,7 +16,42 @@ const initialState = {
             date: '28 Sep, 23',
             leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
             doneTodo: []
-        }
+        },
+        {
+            id: (uuidv4()),
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            doneTodo: []
+        },
+        {
+            id: (uuidv4()),
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            doneTodo: []
+        },
+        {
+            id: (uuidv4()),
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            doneTodo: []
+        },
+        {
+            id: (uuidv4()),
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            doneTodo: []
+        },
+        {
+            id: (uuidv4()),
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            doneTodo: []
+        },
     ],
 };
 

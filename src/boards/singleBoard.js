@@ -58,7 +58,7 @@ const SingleBoard = (props) => {
                     <span>
                         <AwesomeButtonProgress type="secondary"
                             onPress={async (element, next) => {
-                                await delay(1000);
+                                await delay(700);
                                 dispatch(deleteBoard({ id: props.id }));
                                 next();
                                 await delay(500);

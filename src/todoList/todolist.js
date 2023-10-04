@@ -87,7 +87,7 @@ export default function ToDoList() {
         <ul>
           <AwesomeButtonProgress type="secondary"
             onPress={async (element, next) => {
-              await delay(1000);
+              await delay(700);
               createNewBoard();
               next();
               await delay(500);
@@ -96,7 +96,7 @@ export default function ToDoList() {
           </AwesomeButtonProgress>
           <AwesomeButtonProgress type="danger"
             onPress={async (element, next) => {
-              await delay(1000);
+              await delay(500);
               history('/');
               next();
               await delay(500);
