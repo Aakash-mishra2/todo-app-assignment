@@ -65,11 +65,17 @@ const boardSlice = createSlice({
             const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
             state.boards[selectedBoard].leftTodo.push(newTask);
         },
-        deleteTodo: (state, action)=>{
-            const delTask = action.payload.taskName;
+        deleteTodo1: (state, action)=>{
+            const index = action.payload.taskID;
             const activeBoard = action.payload.boardID;
             const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
-            state.boards[selectedBoard].leftTodo = state.boards[selectedBoard].leftTodo.filter((item) => item !== delTask);
+            state.boards[selectedBoard].leftTodo.splice(index, 1);
+        },
+        deleteTodo2: (state, action) =>{
+            const index = action.payload.taskID;
+            const activeBoard = action.payload.boardID;
+            const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
+            state.boards[selectedBoard].doneTodo.splice(index, 1);
         },
         completeTodo: (state, action) => {
             const delTask = action.payload.taskName;
@@ -101,5 +107,5 @@ const boardSlice = createSlice({
     }
 });
 
-export const { addTodo, deleteTodo, completeTodo, createBoard, deleteBoard } = boardSlice.actions;
+export const { addTodo, deleteTodo1, deleteTodo2, completeTodo, createBoard, deleteBoard } = boardSlice.actions;
 export default boardSlice.reducer;

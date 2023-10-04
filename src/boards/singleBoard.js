@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AwesomeButton, AwesomeButtonProgress } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import Modal from "../shared/UIElements/Modal";
-import { addTodo, completeTodo, deleteBoard } from '../features/boardSlice';
+import { addTodo, completeTodo, deleteBoard, deleteTodo1, deleteTodo2 } from '../features/boardSlice';
 import { useDispatch } from 'react-redux';
 import './styles/singleBoard.css';
 import InputArea from '../todoList/InputArea';
@@ -76,24 +76,39 @@ const SingleBoard = (props) => {
                 <section className='alltasks'>
                     <div className='done'>
                         <h2>New Tasks</h2>
-                        {props.remTasks.map(x =>
+                        {props.remTasks.map((x, index) =>
                             <section className='taskRow'>
                                 <label htmlFor={x}>
                                     <b><em>{x}</em></b>
                                 </label>
                                 <input type='checkbox' id={x} name={x} onChange={handleChange} />
-                                <span className="material-symbols-outlined">
+                                <span className="material-symbols-outlined"
+                                    onClick={() => {
+                                        dispatch(deleteTodo1({
+                                            taskID : index,
+                                            boardID: props.id,
+                                        }))
+                                    }}
+                                >
                                     close
                                 </span>
                             </section>
                         )}
                     </div>
                     <div className='notDone'>
-                        <h1>Completed Tasks</h1>
-                        {props.doneTasks.map(x =>
+                        <h2>Completed Tasks</h2>
+                        {props.doneTasks.map((x, index) =>
                             <section className='taskRow'>
                                     <b><em>{x}</em></b>
-                                    <span className="material-symbols-outlined">
+                                    <span 
+                                        className="material-symbols-outlined"
+                                        onClick={() => {
+                                        dispatch(deleteTodo2({
+                                            taskID : index,
+                                            boardID: props.id,
+                                        }))
+                                    }}
+                                        >
                                         close
                                     </span>
                             </section>
