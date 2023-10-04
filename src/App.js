@@ -1,11 +1,14 @@
-import React from 'react';
-import {Navigate, Route, Routes } from 'react-router-dom';
-import MainNavigation from './shared/navigation/MainNavigation';
-import Dashboard from './boards/dashboard';
-import ToDoList from './todoList/todolist';
+import React, {Suspense} from 'react';
 import { useSelector } from 'react-redux';
+import {Navigate, Route, Routes } from 'react-router-dom';
+import LoadingSpinner from './shared/UIElements/LoadingSpinner';
+import MainNavigation from './shared/navigation/MainNavigation';
 import LoginPage from './loginPage/loginPage';
 import './App.css';
+
+const Dashboard = React.lazy(() => import('./boards/dashboard'));
+const ToDoList = React.lazy(() => import('./todoList/todolist'));
+
 function App() {
 
   const isLoggedIn = useSelector((state) => state.userAccount.isLoggedIn);
@@ -31,7 +34,13 @@ function App() {
     <React.Fragment>    
         <MainNavigation />
         <main>
+        <Suspense
+          fallback={
+            <div className='center'><LoadingSpinner asOverlay /></div>
+          }
+        >
           {routes}
+        </Suspense>
         </main>
     </React.Fragment>
   );
