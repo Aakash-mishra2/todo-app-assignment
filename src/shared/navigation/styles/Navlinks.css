@@ -24,13 +24,14 @@
   color: #292929;
   text-decoration: none;
   padding: 0.3rem 0.1rem;
+  border-radius: 8px;
 }
 
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-  background: #f8df00;
-  color: #213555;
+  background: #213555;
+  color: #f4f6f8;
 }
 
 .nav-links button {

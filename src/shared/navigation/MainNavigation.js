@@ -32,7 +32,6 @@ export default function MainNavigation() {
                     <span />
                     <span />
                 </button>
-
                     <h1 className="main-navigation__title">
                     <img style={{width: 60, height: 60}} src={Icon} alt="App icon" />
                     <Link className="desktop-Title" to='/'>ToDo-App</Link>
