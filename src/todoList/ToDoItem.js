@@ -8,7 +8,11 @@ function ToDoItem(props) {
         props.onChecked(props.id);
       }}
     >
-      <li>{props.text}</li>
+      <li><b><em>{props.text}</em></b>
+      <span className="material-symbols-outlined">
+        close
+      </span>
+      </li>
     </div>
   );
 }

@@ -3,12 +3,24 @@
     max-width: 80% !important;
     margin: 2% auto !important;
 }
-
-
+.tasksList {
+    margin-top: 0;
+}
 .tasksList li {
     text-align: left;
     position: relative;
     left: 65px;
     padding: 0.5rem;
-    margin: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

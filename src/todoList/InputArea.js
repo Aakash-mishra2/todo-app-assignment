@@ -11,18 +11,18 @@ function InputArea(props) {
           onChange={(event) => {
             props.onChecked(event);
           }}
-          placeholder="Add New Todo"
+          placeholder={props.placeholder}
           type="text"
           value={props.inputText}
         />
       </span>
-      <span>
+      { props.btn && <span>
         <AwesomeButton 
           type="primary"
           onPress={() => props.addItem()}
           className="plus"
-        >+</AwesomeButton>
-      </span>
+        >{props.btn}</AwesomeButton>
+      </span>}
     </div>
   );
 }

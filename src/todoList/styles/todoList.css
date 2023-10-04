@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 .container {
     height: auto;
     min-height: 200px;
@@ -14,20 +15,22 @@
 
 .heading {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-family: cursive;
 }
 
-.heading h1 {
+.heading h1, h6{
     transform: rotate(2deg);
     padding: 0.2rem 1.2rem;
+    margin: 0.2rem;
     border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
     background-color: #fdcb6e;
-    font-size: 1.5rem;
-    margin-top: 10px;
 }
-
+.heading h1{ font-size: 1.5rem;}
 button {
     font-family: "Architects Daughter", cursive;
     padding-bottom: 3px;
@@ -43,4 +46,7 @@ button {
     border: 2px solid white;
     border-radius: 10%;
     color: white;
+}
+ul{
+    list-style: inside;
 }

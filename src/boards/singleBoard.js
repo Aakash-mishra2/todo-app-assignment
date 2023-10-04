@@ -45,6 +45,8 @@ const SingleBoard = (props) => {
                                 addItem =  {addTask}
                                 onChecked = {handleTodo}
                                 inputText = {inputText}
+                                placeholder = "Add new Todo !"
+                                btn="+"
                             />
                             {/* <input
                                 autoComplete="off"
