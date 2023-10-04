@@ -1,55 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from 'uuid';
-// const initialState = [
-//     {
-//     name: '',
-//     totalTodo: 0,
-//     completedTodo: 0,
-//     tasks: [],
-//     },
-// ];
 const initialState = {
     boards: [
         {
             id: (uuidv4()),
-            name: 'Sample Board',
+            name: 'New User Guide',
             date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
-            doneTodo: []
-        },
-        {
-            id: (uuidv4()),
-            name: 'Sample Board',
-            date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
-            doneTodo: []
-        },
-        {
-            id: (uuidv4()),
-            name: 'Sample Board',
-            date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
-            doneTodo: []
-        },
-        {
-            id: (uuidv4()),
-            name: 'Sample Board',
-            date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
-            doneTodo: []
-        },
-        {
-            id: (uuidv4()),
-            name: 'Sample Board',
-            date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
-            doneTodo: []
-        },
-        {
-            id: (uuidv4()),
-            name: 'Sample Board',
-            date: '28 Sep, 23',
-            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
+            leftTodo: ["Enter new todo from top bar", " Click checkbox for finished task", "Click X to delete this Todo", "Press DELETE to remove this board."],
             doneTodo: []
         },
     ],

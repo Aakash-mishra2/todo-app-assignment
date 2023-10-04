@@ -43,7 +43,7 @@ const SingleBoard = (props) => {
                             <p><b>{props.name}</b></p>
                             <b><em>{props.date}</em></b>
                         </div>
-                        <div>
+                        <div className='newtodo'>
                             <InputArea
                                 addItem={addTask}
                                 onChecked={handleTodo}
@@ -85,7 +85,7 @@ const SingleBoard = (props) => {
                                 <span className="material-symbols-outlined"
                                     onClick={() => {
                                         dispatch(deleteTodo1({
-                                            taskID : index,
+                                            taskID: index,
                                             boardID: props.id,
                                         }))
                                     }}
@@ -99,18 +99,20 @@ const SingleBoard = (props) => {
                         <h2>Completed Tasks</h2>
                         {props.doneTasks.map((x, index) =>
                             <section className='taskRow'>
+                                <label>
                                     <b><em>{x}</em></b>
-                                    <span 
-                                        className="material-symbols-outlined"
-                                        onClick={() => {
+                                </label>
+                                <span
+                                    className="material-symbols-outlined"
+                                    onClick={() => {
                                         dispatch(deleteTodo2({
-                                            taskID : index,
+                                            taskID: index,
                                             boardID: props.id,
                                         }))
                                     }}
-                                        >
-                                        close
-                                    </span>
+                                >
+                                    close
+                                </span>
                             </section>
                         )}
 
