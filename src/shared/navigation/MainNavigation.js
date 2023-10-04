@@ -4,6 +4,7 @@ import MainHeader from "./MainHeader";
 import Navlinks from "./Navlinks";
 import SideMenu from "../UIElements/SideMenu";
 import Backdrop from "../UIElements/BackDrop";
+import Icon from "../../icons/to-do-list.png";
 
 import './styles/MainNavigation.css';
 
@@ -32,7 +33,8 @@ export default function MainNavigation() {
                     <span />
                 </button>
 
-                <h1 className="main-navigation__title">
+                    <h1 className="main-navigation__title">
+                    <img style={{width: 60, height: 60}} src={Icon} alt="App icon" />
                     <Link className="desktop-Title" to='/'>ToDo-App</Link>
                     <Link className="mobile-Title" to='/'>To-Do-App</Link>
                 </h1>

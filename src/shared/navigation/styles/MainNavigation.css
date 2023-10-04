@@ -21,7 +21,11 @@
   color: white;
   letter-spacing: 0.9px;
   text-align: left;
-
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-left: 1%;
 }
 
 .main-navigation__title>.desktop-Title {
