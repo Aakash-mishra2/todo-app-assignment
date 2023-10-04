@@ -1,21 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-//import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "../formElements/Button";
-//import {logOut } from '../../features/UserAccount/loginSlice';
+import { logout } from "../../features/accountSlice";
 import "./styles/Navlinks.css";
 
 export default function Navlinks() {
-    // const currentUserId = useSelector((state) => state.userAccount.UserId);
-    // const isLoggedIn = useSelector((state) => state.userAccount.isloggedIn);
-    // const dispatch = useDispatch();
-    const isLoggedIn = true;
+    const isLoggedIn = useSelector((state) => state.userAccount.isLoggedIn);
+    const dispatch = useDispatch();
     return (
         <ul className="nav-links">
-            
-            {/* <li>
-                <NavLink to="/">Citizens</NavLink>
-            </li> */}
             <li>
                 {isLoggedIn && <NavLink to="/">Dashboard</NavLink>}
             </li>
@@ -26,7 +20,7 @@ export default function Navlinks() {
                 <NavLink to="/"> LOGIN </NavLink>
             </li>}
             <li> 
-                {isLoggedIn && <Button to=""> LOGOUT </Button> }
+                {isLoggedIn && <Button onClick={() => dispatch(logout())}> LOGOUT </Button> }
             </li>
         </ul>
     );
