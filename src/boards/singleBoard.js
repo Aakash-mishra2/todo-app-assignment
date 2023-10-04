@@ -42,23 +42,12 @@ const SingleBoard = (props) => {
                         <p>"---"</p>
                         <div>
                             <InputArea
-                                addItem =  {addTask}
-                                onChecked = {handleTodo}
-                                inputText = {inputText}
-                                placeholder = "Add new Todo !"
+                                addItem={addTask}
+                                onChecked={handleTodo}
+                                inputText={inputText}
+                                placeholder="Add new Todo !"
                                 btn="+"
                             />
-                            {/* <input
-                                autoComplete="off"
-                                type='text'
-                                placeholder='Add New Task'
-                                id="newTodo"
-                            />
-                            <AwesomeButton type="primary"
-                                onPress={addTodo}
-                                className="plus">
-                                +
-                            </AwesomeButton> */}
                         </div>
                     </span>
                 }
@@ -88,12 +77,23 @@ const SingleBoard = (props) => {
                             <label htmlFor={x}>
                                 <b><em>{x}      </em></b>
                                 <input type='checkbox' name={x} onChange={handleChange} />
+                                <span className="material-symbols-outlined">
+                                    close
+                                </span>
                             </label>
                         )}
                     </div>
                     <div className='notDone'>
                         <h1>Completed Tasks</h1>
-                        {props.doneTasks.map(x => <b><em>{x}</em></b>)}
+                        {props.doneTasks.map(x =>
+                            <label>
+                                <b><em>{x}</em></b>
+                                <span className="material-symbols-outlined">
+                                    close
+                                </span>
+                            </label>
+                        )}
+
                     </div>
                 </section>
             </Modal>

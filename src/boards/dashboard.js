@@ -6,29 +6,10 @@ import Button from '../shared/formElements/Button';
 import {v4 as uuidv4 } from 'uuid';
 
 const Dashboard = () => {
-    const dispatch = useDispatch();
     const allBoards2 = useSelector((state) => state.boards.boards);
-    const addBoards = () => {
-        dispatch(createBoard(
-            {
-                id: (uuidv4()),
-                date: '23 June',
-                todo: ["milk", "curd", "eggs"]
-            }
-        ));
-        dispatch(createBoard(
-            {
-                id: (uuidv4()),
-                date: '25 June',
-                todo: ["tomato", "spinach"]
-            }
-        ));
-    }
-    
     return (
 
         <div>
-            <Button onClick={addBoards}>Add boards</Button>
             {allBoards2 && allBoards2.map((item) => (
                 <SingleBoard
                     key = {item.id}
