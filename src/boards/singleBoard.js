@@ -77,24 +77,26 @@ const SingleBoard = (props) => {
                     <div className='done'>
                         <h2>New Tasks</h2>
                         {props.remTasks.map(x =>
-                            <label htmlFor={x}>
-                                <b><em>{x}      </em></b>
-                                <input type='checkbox' name={x} onChange={handleChange} />
+                            <section className='taskRow'>
+                                <label htmlFor={x}>
+                                    <b><em>{x}</em></b>
+                                </label>
+                                <input type='checkbox' id={x} name={x} onChange={handleChange} />
                                 <span className="material-symbols-outlined">
                                     close
                                 </span>
-                            </label>
+                            </section>
                         )}
                     </div>
                     <div className='notDone'>
                         <h1>Completed Tasks</h1>
                         {props.doneTasks.map(x =>
-                            <label>
-                                <b><em>{x}</em></b>
-                                <span className="material-symbols-outlined">
-                                    close
-                                </span>
-                            </label>
+                            <section className='taskRow'>
+                                    <b><em>{x}</em></b>
+                                    <span className="material-symbols-outlined">
+                                        close
+                                    </span>
+                            </section>
                         )}
 
                     </div>

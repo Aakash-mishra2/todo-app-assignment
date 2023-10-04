@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login, logout } from "../features/accountSlice";
+import { login } from "../features/accountSlice";
 
 import './loginPage.css';
 import { AwesomeButton } from "react-awesome-button";
