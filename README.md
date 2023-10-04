@@ -2,6 +2,31 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Tech-Stack
+
+React.js - Redux front-end web application.
+
+- Cnique id to each todo-list using uuid;
+- UI elements transition on screen using react-transition-group;
+- Custom stylish 3-D UI Buttons using react-awesome-buttons;
+- react-router-dom for multiple pages rendering and useNavigate;
+- exhaustive HTML-CSS structure for styling UI elements and more.
+- React Hooks: useSelector, useHistory, useState, useDispatch.
+- Javascript arrays and functions splice, findIndex, map, push, pop, forEach and more.
+
+### App working
+- A person can add, edit, or delete a todo/item. 
+- Different tabs which will contain todos are called Boards.
+- Different Boards will contain different todos; every todo created in a particular board is attached to that board and not visible to other boards.
+- Users can add a new board according to his/her needs/requirements and also delete it accordingly.
+- Boards represented in a tabular structure on the UI side so that users can click on one tab to mange the todos of a particular board.
+- Todo can be added from the search bar and enlisted in the new tasks column.
+- Click on the delete/cross button and the todo will be deleted forever.
+
+## Author
+- [Aakash Mishra](https://portfolio-aakash28.netlify.app/)
+- [My Github ](https://github.com/Aakash-mishra2)
+
 ## Available Scripts
 
 In the project directory, you can run:
