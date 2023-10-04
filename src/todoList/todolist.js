@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ToDoItem from "./ToDoItem";
 import InputArea from "./InputArea";
-import Button from "../shared/formElements/Button";
 import { AwesomeButtonProgress } from "react-awesome-button";
 import './styles/todoList.css';
 import { createBoard } from "../features/boardSlice";
@@ -46,12 +45,11 @@ export default function ToDoList() {
 
   const createNewBoard = () => {
     const newID = uuidv4();
-    const date = fullDate;
-    const todo = items;
     dispatch(createBoard({
       id: newID,
-      date: date,
-      todo: todo
+      name: boardName,
+      date: fullDate,
+      todo: items
     }));
     history('/');
   }

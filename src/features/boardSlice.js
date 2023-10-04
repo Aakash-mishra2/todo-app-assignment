@@ -12,8 +12,9 @@ const initialState = {
     boards: [
         {
             id: (uuidv4()),
-            date: '25 June',
-            leftTodo: ["tomato", "spinach"],
+            name: 'Sample Board',
+            date: '28 Sep, 23',
+            leftTodo: ["Do Assignments", "Finish dsa repo.", "Submit report"],
             doneTodo: []
         }
     ],
@@ -46,9 +47,11 @@ const boardSlice = createSlice({
         createBoard: (state, action) => {
             const id = action.payload.id;
             const date = action.payload.date;
+            const name = action.payload.name;
             const incompleteTasks = action.payload.todo;
             const newBoard = {
                 id: id, 
+                name: name,
                 date: date, 
                 leftTodo: incompleteTasks,
                 doneTodo: [],

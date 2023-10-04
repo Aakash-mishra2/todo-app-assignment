@@ -39,7 +39,10 @@ const SingleBoard = (props) => {
                 closeBox={toggleBoard}
                 header={
                     <span>
-                        <p>"---"</p>
+                        <div className='details'>
+                            <p><b>{props.name}</b></p>
+                            <b><em>{props.date}</em></b>
+                        </div>
                         <div>
                             <InputArea
                                 addItem={addTask}
@@ -101,7 +104,7 @@ const SingleBoard = (props) => {
             <div className="note"
                 onClick={toggleBoard}>
                 <h1>
-                    {props.date}
+                    {props.name}
                 </h1>
             </div>
         </React.Fragment>

@@ -13,6 +13,7 @@ const Dashboard = () => {
             {allBoards2 && allBoards2.map((item) => (
                 <SingleBoard
                     key = {item.id}
+                    name = {item.name}
                     id={item.id}
                     date={item.date}
                     remTasks={item.leftTodo}

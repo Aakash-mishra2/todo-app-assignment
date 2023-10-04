@@ -46,12 +46,18 @@
     margin: 16px;
     float: left;
 }
-
 .note h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
 }
-
+.details p{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
 .note p {
     font-size: 1.1em;
     margin-bottom: 10px;
