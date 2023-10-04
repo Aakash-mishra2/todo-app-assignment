@@ -1,14 +1,16 @@
 .login-form {
     margin: 3% auto;
-    padding: 40px 0;
+    padding: 40px 40px;
     text-align: center;
-    background-color: #50a3a2;
+    background-color: #f9f5eb;
+    font-family: 'Architechts Daughter', cursive;
+    width: fit-content;
 }
 
 .login-form h1 {
     font-size: 40px;
     font-weight: 200;
-    color: white
+    color: #213555
 }
 
 .login-form>p {
@@ -16,7 +18,7 @@
 }
 
 input {
-    border: 1px solid rgba(252, 252, 252, 0.4);
+    border: 1px solid #213555;
     background-color: rgba(252, 252, 252, 0.2);
     width: 250px;
     border-radius: 3px;
@@ -26,6 +28,22 @@ input {
     display: block;
     text-align: center;
     font-size: 18px;
-    color: white;
+    color: #213555;
     font-weight: 300;
+    box-shadow: 4px 3px 7px 2px #00000040;
+}
+p{
+    font-size: 1rem;
+}
+.login-btn{
+    box-shadow: 4px 3px 7px 2px #00000040;
+    border-radius: 13px;
+}
+.aws-button, .login-btn{
+    --button-primary-color: #174590 !important;
+    --button-primary-color-dark: #baa627 !important;
+    --button-primary-color-light: #ffffff !important;
+    --button-primary-color-hover: #213555 !important;
+    --button-primary-color-active: #c548d3!important;
+    --button-primary-border: 0px solid #ffe11d !important;
 }

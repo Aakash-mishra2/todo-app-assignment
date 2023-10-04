@@ -10,14 +10,14 @@ const Dashboard = () => {
     const allBoards2 = useSelector((state) => state.boards.boards);
     const userName = useSelector((state) => state.userAccount.userName);
     const email = useSelector((state) => state.userAccount.email); 
-    const password = useSelector((state) => state.userAccount.password);
     const navigate = useNavigate();
     return (
         <React.Fragment >
         <section className="home">
             <div className='note'>
-                <h2><em>Welcome back,  </em>{userName} !</h2>
-                <p>{email} {password} </p>
+                <h2 style={{margin: 0}}><em>Welcome back,  </em>{userName} !</h2>
+                <p style={{fontSize: 18, letterSpacing: 1}}>
+                        <b><em>{email}</em></b></p>
                 <p><em>All your boards are listed below. Click to view.</em> </p>
             </div>
             <div className='display-boards'>

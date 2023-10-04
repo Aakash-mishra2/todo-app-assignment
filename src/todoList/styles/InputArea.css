@@ -8,7 +8,7 @@
     border-bottom: dashed 3px #fdcb6e;
     font-family: "Architects Daughter", cursive;
     font-size: 1.2rem;
-    color: hsla(0, 100%, 99%, 0.7);
+    color: #213555;
     width: auto;
     margin-left: 4px;
     margin-bottom: 20px;
@@ -30,12 +30,12 @@
     --button-raise-level: 4px !important;
     --button-hover-pressure: 2 !important;
     --transform-speed: 0.185s !important;
-    --button-primary-color: #8e067c !important;
-    --button-primary-color-dark: #baa627 !important;
-    --button-primary-color-light: #ffffff !important;
-    --button-primary-color-hover: #5b084c !important;
-    --button-primary-color-active: #c548d3!important;
-    --button-primary-border: 0px solid #ffe11d !important;
+    --button-primary-color: #8e067c ;
+    --button-primary-color-dark: #baa627 ;
+    --button-primary-color-light: #ffffff ;
+    --button-primary-color-hover: #5b084c ;
+    --button-primary-color-active: #c548d3;
+    --button-primary-border: 0px solid #ffe11d;
 }
 
 .newTodo span {

@@ -11,12 +11,12 @@
     --button-raise-level: 4px !important;
     --button-hover-pressure: 2 !important;
     --transform-speed: 0.185s !important;
-    --button-primary-color: #8e067c !important;
-    --button-primary-color-dark: #baa627 !important;
-    --button-primary-color-light: #ffffff !important;
-    --button-primary-color-hover: #5b084c !important;
-    --button-primary-color-active: #c548d3!important;
-    --button-primary-border: 0px solid #ffe11d !important;
+    --button-primary-color: #8e067c;
+    --button-primary-color-dark: #baa627;
+    --button-primary-color-light: #ffffff;
+    --button-primary-color-hover: #5b084c;
+    --button-primary-color-active: #c548d3;
+    --button-primary-border: 0px solid #ffe11d;
     --button-secondary-color: #b40939;
     --button-secondary-color-dark: #9a936a;
     --button-secondary-color-light: #f5f5f5;

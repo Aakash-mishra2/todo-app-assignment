@@ -37,7 +37,7 @@ export default function LoginPage(props) {
             <h1>
                 Welcome {contact.name} !
             </h1>
-            <p>Please login below </p>
+            <p><i>Please login below </i></p>
                 <input
                     name="name"
                     type="text"
@@ -49,7 +49,7 @@ export default function LoginPage(props) {
                 <input
                     name="email"
                     type="text"
-                    placeholder="Email Address"
+                    placeholder="Enter Email"
                     onChange={handleChange}
                     value={contact.email}
                     autoComplete="off"
@@ -62,9 +62,9 @@ export default function LoginPage(props) {
                     value={contact.password}
                     autoComplete="off"
                 />
-                <AwesomeButton type="primary"
+                <AwesomeButton type="primary" className="login-btn"
                     onPress={userLoginHandler}
-                > login </AwesomeButton>
+                > Login </AwesomeButton>
         </div>
     )
 }
