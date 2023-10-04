@@ -4,10 +4,9 @@ import {Navigate, Route, Routes } from 'react-router-dom';
 import LoadingSpinner from './shared/UIElements/LoadingSpinner';
 import MainNavigation from './shared/navigation/MainNavigation';
 import LoginPage from './loginPage/loginPage';
+import Dashboard from './boards/dashboard';
+import ToDoList from './todoList/todolist';
 import './App.css';
-
-const Dashboard = React.lazy(() => import('./boards/dashboard'));
-const ToDoList = React.lazy(() => import('./todoList/todolist'));
 
 function App() {
 
