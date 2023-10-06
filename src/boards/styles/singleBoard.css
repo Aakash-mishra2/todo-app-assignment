@@ -109,6 +109,14 @@ label {
     'GRAD' 0,
     'opsz' 24
   }
+.note>.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 24
+}
+
 .newtodo input{
     color: white !important;
 }

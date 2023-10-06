@@ -125,6 +125,13 @@ const SingleBoard = (props) => {
                 <h1>
                     {props.name}
                 </h1>
+                <span className="material-symbols-outlined"
+                    onClick={() => {
+                        dispatch(deleteBoard({ id: props.id, }))
+                    }}
+                >
+                    close
+                </span>
             </div>
         </React.Fragment>
     )
