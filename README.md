@@ -2,16 +2,44 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-.
-├── build                   # Compiled files (alternatively `dist`)
-├────
-├── docs 
-|                  # Documentation files (alternatively `doc`)
-├── src                     # Source files (alternatively `lib` or `app`)
-├── test                    # Automated tests (alternatively `spec` or `tests`)
-├── tools                   # Tools and utilities
-├── LICENSE
-└── README.md
+```
+📦src
+ ┣ 📂todoList //component to add new board 
+ ┃ ┣ 📂styles       //css files
+ ┃ ┣ 📜InputArea    //Input area for new tasks
+ ┃ ┣ 📜ToDoItem
+ ┃ ┗ 📜todolist
+ ┣ 📂shared     //components shared among different pages
+ ┃ ┣ 📂formElements
+ ┃ ┃ ┗ 📜Button     //custom button supporting link, anchor and button
+ ┃ ┣ 📂UIElements
+ ┃ ┃ ┣ 📜BackDrop    //dark background to modal and sidemenu
+ ┃ ┃ ┣ 📜Modal       //to display a board over screen 
+ ┃ ┃ ┣ 📜SideMenu    //Navigation bar in mobile viewport
+ ┃ ┃ ┣ 📜LoadingSpinner     
+ ┃ ┗ 📂navigation
+ ┃ ┃ ┣ 📂styles
+ ┃ ┃ ┣ 📜MainHeader         //fixed on top of all pages
+ ┃ ┃ ┣ 📜MainNavigation     
+ ┃ ┃ ┗ 📜Navlinks
+ ┣ 📂boards         //hold all tasks lists completed and incomplete
+ ┃ ┣ 📂styles
+ ┃ ┣ 📜dashboard    //user homepage after login to display all boards add new.
+ ┃ ┗ 📜singleBoard  //to view and update existing board as tasks completed
+ ┣ 📂store  
+ ┃ ┗ 📜index.js     //redux store for all slices     
+ ┣ 📂features       
+ ┃ ┣ 📜accountSlice.js      //all reducers for managing user account login logouts.
+ ┃ ┗ 📜boardSlice.js    //all reducers for manipulating boards and todo lists
+ ┣ 📂loginPage
+ ┃ ┗ 📜loginPage        //first view login page for users
+ ┣ 📂icons
+ ┃ ┗ 📜to-do-list.png   //web app logo
+ ┣ 📜App.css
+ ┣ 📜index.css
+ ┣ 📜index.js   //server file entry point Redux Store provided here
+ ┗ 📜App.js     //main parent component to hold all other components.
+```
 
 ## Tech-Stack
 
