@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  ┣ 📂boards         //hold all tasks lists completed and incomplete
  ┃ ┣ 📂styles
  ┃ ┣ 📜dashboard    //user homepage after login to display all boards add new.
- ┃ ┗ 📜singleBoard  //to view and update existing board as tasks completed
+ ┃ ┗ 📜singleBoard  //main js logic and reducer component to delete tasks and mark completed tasks.
  ┣ 📂store  
  ┃ ┗ 📜index.js     //redux store for all slices     
  ┣ 📂features       

@@ -28,16 +28,24 @@ const boardSlice = createSlice({
             state.boards[selBoardIndex].leftTodo.push(newTask);
         },
         deleteTodo1: (state, action)=>{
-            
+            const index = action.payload.taskID;
+            const activeBoard = action.payload.boardID;
+            const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
+            state.boards[selectedBoard].leftTodo.splice(index, 1);
         },
         deleteTodo2: (state, action) =>{
-            
+            const index = action.payload.taskID;
+            const activeBoard = action.payload.boardID;
+            const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
+            state.boards[selectedBoard].doneTodo.splice(index, 1);
         },
         completeTodo: (state, action) => {
-            const selBoard = state.boards.findIndex((item) => item.id === action.payload.boardID);
-            const finishedTask = action.payload.taskName;
-            state.boards[selBoard].leftTodo.filter( item => item !== finishedTask);
-            state.boards[selBoard].doneTodo.push(finishedTask);
+            const delTask = action.payload.taskName;
+            const activeBoard = action.payload.boardID;
+            const selectedBoard = state.boards.findIndex((x) => x.id === activeBoard);
+            state.boards[selectedBoard].leftTodo = state.boards[selectedBoard].leftTodo.filter((item) => item !== delTask);
+            state.boards[selectedBoard].doneTodo.push(delTask);
+            state.boards[selectedBoard].doneTodo.reverse();
         },
         createBoard: (state, action) => {
             const id = action.payload.id;
