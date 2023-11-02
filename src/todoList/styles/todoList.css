@@ -24,10 +24,8 @@
 }
 
 .heading h1, h6{
-    transform: rotate(2deg);
     padding: 0.2rem 1.2rem;
     margin: 0.2rem;
-    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
     background-color: #fdcb6e;
 }
 .heading h1{ font-size: 1.5rem;}

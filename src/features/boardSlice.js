@@ -36,7 +36,6 @@ const boardSlice = createSlice({
         completeTodo: (state, action) => {
             const selBoard = state.boards.findIndex((item) => item.id === action.payload.boardID);
             const finishedTask = action.payload.taskName;
-            const taskIndex = state.boards[selBoard].leftTodo.findIndex((x) => x === finishedTask);
             state.boards[selBoard].leftTodo.filter( item => item !== finishedTask);
             state.boards[selBoard].doneTodo.push(finishedTask);
         },
