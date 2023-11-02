@@ -40,10 +40,23 @@ const boardSlice = createSlice({
             state.boards[selBoard].doneTodo.push(finishedTask);
         },
         createBoard: (state, action) => {
-            
+            const id = action.payload.id;
+            const date = action.payload.date;
+            const name = action.payload.name;
+            const incompleteTasks = action.payload.todo;
+            const newBoard = {
+                id: id, 
+                name: name,
+                date: date, 
+                leftTodo: incompleteTasks,
+                doneTodo: [],
+            };
+            state = state.boards.push(newBoard);
         },
         deleteBoard: (state,action) => {
-            
+            const delID = action.payload.id;
+            const selectedBoard = state.boards.findIndex((b) => b.id === delID);
+            state.boards.splice(selectedBoard, 1);
         }
     }
 });
