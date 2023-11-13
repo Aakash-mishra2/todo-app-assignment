@@ -14,12 +14,12 @@ export default function MainNavigation() {
 
     return (
         <React.Fragment>
-            {menu && <Backdrop onClick={closeMenu} />}
             <SideMenu show={menu} closeMenu={closeMenu} >
                 <nav className="h-full">
                     <Navlinks />
                 </nav>
             </SideMenu>
+            {menu && <Backdrop onClick={closeMenu} />}
 
             <MainHeader>
                 <button
