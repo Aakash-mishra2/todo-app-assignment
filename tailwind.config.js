@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         'arch_daug' : ["Architects Daughter", 'cursive'],
         'ubuntu': ["Ubuntu", 'cursive'],
+        'rem': ['REM', 'sans-serif'],
         'default': ['-apple-system', 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Architects Daughter']
       }
     },
