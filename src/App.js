@@ -32,7 +32,7 @@ function App() {
   return (
     <React.Fragment>    
         <MainNavigation />
-        <main>
+        <main className='mt-20 ml-4'>
         <Suspense
           fallback={
             <div className='center'><LoadingSpinner asOverlay /></div>
