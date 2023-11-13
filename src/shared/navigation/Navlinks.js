@@ -38,7 +38,7 @@ export default function Navlinks() {
             </li>}
             <li>
                 {isLoggedIn && <button onClick={() => dispatch(logout())}
-                  className="curson-pointer font-rem border-2 border-[#213555] md:border-white rounded-lg text-[#292929] md:text-white md:bg-[#213555] pt-1.5 pb-1.5 pl-0.5 pr-0.5 font-inherit
+                  className="curson-pointer font-rem border-2 border-[#213555] rounded-lg text-[#292929] md:text-white md:bg-[#213555] pt-1.5 pb-1.5 pl-0.5 pr-0.5 font-inherit
                    hover:bg-[#292929] hover:text-white active:bg-[#292929] active:text-white
                   md:hover:bg-[#eae3d2] md:hover:text-[#292929] md:active:bg-[#eae3d2] md:active:text-[#292929] md:border-white"  
                 > 
