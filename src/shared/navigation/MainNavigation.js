@@ -30,7 +30,7 @@ export default function MainNavigation() {
                     <span className="w-12 h-0.5 bg-white"/>
                     <span className="w-12 h-0.5 bg-white"/>
                 </button>
-                    <h1 className="text-white items-center tracking-wider font-bold text-3xl flex flex-row gap-5 ml-0 items-left p-4">
+                    <h1 className="text-white items-center tracking-wider font-bold text-4xl flex flex-row gap-2 ml-0 items-left p-0">
                     <img style={{width: 60, height: 60}} src={Icon} alt="App icon" />
                     <Link to='/'>ToDo-App</Link>
 
