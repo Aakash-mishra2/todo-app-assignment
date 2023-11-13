@@ -25,19 +25,19 @@ export default function MainNavigation() {
 
             <MainHeader>
                 <button
-                    className="main-navigation__menu-btn"
+                    className="md:block w-12 h-12 bg-transparent border-none flex flex-col gap-4 justify-around items-center mr-8 cursor-pointer"
                     onClick={openMenu}
                 >
-                    <span />
-                    <span />
-                    <span />
+                    <span className="w-12 h-0.5 bg-white"/>
+                    <span className="w-12 h-0.5 bg-white"/>
+                    <span className="w-12 h-0.5 bg-white"/>
                 </button>
-                    <h1 className="main-navigation__title">
+                    <h1 className="text-white items-center tracking-wider font-bold text-3xl flex flex-row gap-5 ml-0.5 text-left">
                     <img style={{width: 60, height: 60}} src={Icon} alt="App icon" />
-                    <Link className="desktop-Title" to='/'>ToDo-App</Link>
-                    <Link className="mobile-Title" to='/'>To-Do-App</Link>
+                    <Link to='/'>ToDo-App</Link>
+
                 </h1>
-                <nav className="main-navigation__header-nav">
+                <nav className="block md:hidden">
                     <Navlinks />
                 </nav>
 

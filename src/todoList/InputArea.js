@@ -14,6 +14,7 @@ function InputArea(props) {
           placeholder={props.placeholder}
           type="text"
           value={props.inputText}
+          className="font-arch_daug"
         />
       </span>
       { props.btn && <span>

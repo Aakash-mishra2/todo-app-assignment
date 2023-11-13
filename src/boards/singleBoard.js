@@ -75,7 +75,7 @@ const SingleBoard = (props) => {
             >
                 <section className='alltasks'>
                     <div className='done'>
-                        <h2>New Tasks</h2>
+                        <h2 className='font-semibold text-sm'>New Tasks</h2>
                         {props.remTasks.map((x, index) =>
                             <section className='taskRow'>
                                 <label htmlFor={x}>
@@ -96,7 +96,7 @@ const SingleBoard = (props) => {
                         )}
                     </div>
                     <div className='notDone'>
-                        <h2>Completed Tasks</h2>
+                        <h2 className='font-semibold text-sm'>Completed Tasks</h2>
                         {props.doneTasks.map((x, index) =>
                             <section className='taskRow'>
                                 <label>
@@ -120,9 +120,9 @@ const SingleBoard = (props) => {
                 </section>
             </Modal>
 
-            <div className="note"
+            <div className="bg-white max-w-60 rounded-lg shadow-md shadow-black/60 text-base p-2.5 m-4"
                 onClick={toggleBoard}>
-                <h1>
+                <h1 className='font-semibold font-family:segue-ui'>
                     {props.name}
                 </h1>
                 <span className="material-symbols-outlined"

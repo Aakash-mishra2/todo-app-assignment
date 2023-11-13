@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
 
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
 * {
   box-sizing: border-box;
   
